@@ -11,87 +11,91 @@ html {
                       ahora 1 rem = 10px */
 }
 
+/* ---------HEADER------*/
+
+
+/* define el color de heder por gerarquia */
+
+.logoinicial {
+  background-color: rgb(1, 22, 39);
+  padding: 20px;
+}
+
+.logoinicial img {
+  margin: 15px 25px 0 1100px;
+  width: 400px;
+  height: 120px;
+}
+
+.logoinicial p {
+  color: red;
+  font-size: 65px;
+  text-align: left;
+  margin: -100px 0 30px 50px;
+  font-family: 'Sedgwick Ave Display', cursive;
+}
+
+.titulo {
+  text-align: left;
+  font-size: 15px;
+}
+
+/* ---------NAV---------*/
+
+/* le saca el punto delante de la lista */
 ul {
-  /* le saca el punto delante de la lista */
   list-style-type: none;
 }
 
+/* le saca el subrallado a los links */
 a {
   text-decoration: none;
 }
 
-li a {
-  color: #0077b6;
+.Nav a {
+color: rgb(1, 22, 39);
 }
 
-h1 {
-  color: rgb(7, 7, 7);
+.menu {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+}
+
+.menu li {
+  display: inline-block;
   padding: 20px;
-  text-align: center;
-  font-size: 30px;
 }
 
-body {
-  background-color: #90e0ef;
+/* ---------MAIN---------*/
+
+.encabezado_titulo {
+  margin-bottom: 35px;
 }
 
-section {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 15px;
-  padding-bottom: 10px;
-  margin: 5px;
-  /*   display: flex; */
-  list-style-type: none;
-  padding: 10px;
-}
-
-/* -----cabeza de pagina----- */
-
-.header {
-  text-align: right;
-}
-
-/* navegador inicio */
-
-.nav ul {
-  font-family: 'Sedgwick Ave Display', cursive;
-  font-size: 40px;
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-}
-
-.nav a {
-  padding: 10px;
-}
-
-/* ------imagenes------ */
-.img {
-  text-align: right;
-  padding-bottom: 50px;
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-}
-
-.footer p {
+.parrafo_contenido {
+  margin-bottom: 40px;
   font-size: 20px;
-  color: black;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
 }
 
-.footer a link {
-  text-align: right;
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
+/* ------FOOTER-----*/
+
+.Footer p {
+  font-size: 20px;
+  margin: 20px 0 10px 0;
+  color: red;
+}
+
+.redes_sociales {
+margin-bottom: auto;
+  margin-left: 1100px;
+}
+
+.redes_sociales img {
+  height: 70px;
+  width: 100px;
 }
 
 /* estructura grilla */
-
 
 .contenedorTotal {
   display: grid;
@@ -238,16 +242,16 @@ section {
   }
 
   .prado {
-    font-size: 25px;
+    font-size: 10px;
     margin: 5px;
-    padding: 5px;
+    padding: 5px 0;
     align-items: center;
   }
 
   .rambla {
     font-size: 10px;
     margin: 5px;
-    padding: 5px;
+    padding: 5px 0;
     align-items: center;
   }
 
