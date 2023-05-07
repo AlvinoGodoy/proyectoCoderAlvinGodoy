@@ -1,0 +1,137 @@
+/* estructura grilla */
+
+.contenedor_venta {
+    display: grid;
+    grid-column-gap: 15px;
+    grid-row-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "logob logob"
+        "inicio inicio"
+        "main imgmapa"
+        "main imgventas"
+        "footer footer"
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+.parrafo_ventas {
+    font-size: 20px;
+}
+
+.mapa_ventas {
+    text-align: center;
+}
+
+.imagen_ventas {
+    text-align: center;
+}
+
+.Header {
+    grid-area: logob;
+}
+
+.Nav {
+    grid-area: inicio;
+}
+
+.main_ventas {
+    grid-area: main;
+}
+
+.imagen_ventas {
+    grid-area: imgventas;
+}
+
+/* ----------Medidas para Tablet-------- */
+
+@media screen and (max-width: 768px) {
+
+    h1 {
+        margin-bottom: 15px;
+        font-size: 20px;
+
+    }
+
+    .parrafo_ventas {
+        font-size: 15px;
+    }
+
+    .mapa_ventas {
+        padding: 2% -4%;
+    }
+}
+
+/* ----------Medidas para Celular-------- */
+
+@media screen and (max-width: 480px) {
+
+    .contenedor_venta {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "logob" "inicio" "main" "maps"
+            "imgv" "footer";
+    }
+
+    .Header {
+        grid-area: logob;
+    }
+
+    .Nav {
+        grid-area: inicio;
+    }
+
+    .main_ventas{
+        grid-area: main;
+    }
+    .mapa_ventas{
+        grid-area: maps;
+    }
+
+    .imagen_ventas{
+        grid-area: imgv;
+    }
+
+    .Footer {
+        grid-area: footer;
+    }
+
+    .encabezado_titulo h1 {
+        margin-left: -20px;
+    }
+
+    .parrafo_ventas p {
+        font-size: 12px;
+        text-align: left;
+        padding: 2% 3%;
+        margin-bottom: 5px;
+    }
+
+    .mapa_ventas {
+        padding: 2% -10%;
+        text-align: left;
+        margin-left: 15px;
+
+    }
+
+    .imagen_ventas {
+        text-align: left;
+        margin-left: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,201 @@
+/* estructura grid - grilla */
+
+.contenedorindex {
+    display: grid;
+    grid-column-gap: 15px;
+    grid-row-gap: 10px;
+    grid-template-columns: 50% 50%;
+    /* 2 columnas */
+    grid-template-rows: auto;
+    /* 4 filas */
+    grid-template-areas:
+        "logob logob"
+        "inicio inicio"
+        "img img"
+        "footer footer"
+}
+
+.Header {
+    grid-area: logob;
+}
+
+.Nav {
+    grid-area: inicio;
+    width: 100%;
+}
+
+.Main {
+    grid-area: img;
+    text-align: center;
+    justify-self: center;
+}
+
+.Footer {
+    grid-area: footer;
+
+    a :hover {
+        background-color: white;
+    }
+
+}
+
+
+/* ----------Medidas para Tablet-------- */
+
+@media screen and (max-width: 768px) {
+
+    .contenedorindex {
+        display: grid;
+        grid-column-gap: 5px;
+        grid-row-gap: 2px;
+        grid-template-columns: 50% 50%;
+        /* 2 columnas */
+        grid-template-rows: auto;
+        /* 4 filas */
+        grid-template-areas: "logob logob" "inicio inicio" "main main" "footer footer";
+        ;
+    }
+
+    .Header {
+        grid-area: logob;
+
+        img {
+            margin: 5px 10px 0px 400px;
+            width: 300px;
+            height: 100px;
+            animation-duration: 4s;
+        }
+    }
+
+    .titulo_logo p {
+        font-size: 50px;
+        text-align: left;
+        margin: -70px 0 20px 50px;
+    }
+
+    .Nav {
+        grid-area: inicio;
+    }
+
+    .Nav li a {
+        font-size: medium;
+    }
+
+    .Main {
+        grid-area: main;
+    }
+
+    .encabezado_titulo {
+        font-size: 20px;
+        text-align: center;
+        margin-top: -10px;
+    }
+
+    .parrafo_contenido p {
+        font-size: 15px;
+        text-align: center;
+        margin-top: -10px;
+    }
+
+    .Footer {
+        grid-area: footer;
+        text-align: center;
+    }
+
+    .parrafo_copy {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .redes_sociales {
+        margin-bottom: auto;
+        margin: 60px 0 10px 400px;
+        display: inline-block;
+
+        img {
+            height: 70px;
+            width: 100px;
+        }
+    }
+
+}
+
+/* ----------Medidas para Celular-------- */
+
+@media screen and (max-width: 480px) {
+
+    .contenedorindex {
+        display: grid;
+        grid-template-columns: 100%;
+        /* 2 columnas */
+        grid-template-rows: auto;
+        /* 4 filas */
+        grid-template-areas: "logob" "inicio" "main" "footer";
+    }
+
+    .Header {
+        grid-area: logob;
+
+        img {
+            margin: 5px 10px 0px 170px;
+            width: 300px;
+            height: 100px;
+        }
+    }
+
+    .titulo_logo p {
+        font-size: 35px;
+        text-align: left;
+        margin: -100px 0 30px 10px;
+        animation-duration: 5s;
+    }
+
+    .Nav {
+        grid-area: inicio;
+    }
+
+    .Nav li a {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .Main {
+        grid-area: main;
+    }
+
+    .encabezado_titulo h1 {
+        font-size: 20px;
+        text-align: center;
+        margin-top: -10px;
+    }
+
+    .parrafo_contenido p {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .Footer p {
+        font-size: 15px;
+        text-align: center;
+
+    }
+
+    .redes_sociales {
+        margin-bottom: auto;
+        margin-left: 130px;
+        display: inline-block;
+        display: flex;
+
+        img {
+            height: 50px;
+            width: 80px;
+        }
+    }
+
+    a:hover {
+        background-color: white;
+    }
+
+}

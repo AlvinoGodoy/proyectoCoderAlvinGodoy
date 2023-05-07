@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62, 5%;
+    /* cambia la medida rem.
+                        antes 1 rem = 16px 
+                        ahora 1 rem = 10px */
+}
+
+/* ---------VARIABLES------- */
+
+$colorHeader: rgb(1, 22, 39);
+$funtelogo: "Sedgwick Ave Display", cursive;
+$colorlogo: red;
+$funteinicio: "Roboto", sans-serif;
+
+/* ---------HEADER------*/
+
+.Header {
+
+    background-color: $colorHeader;
+    padding: 20px;
+    display: flex;
+
+    img {
+        margin: 10px 10px 5px 1000px;
+        text-align: right;
+        width: 400px;
+        height: 120px;
+        animation-duration: 4s;
+
+    }
+}
+
+.titulo_logo p {
+
+    color: $colorlogo;
+    font-size: 65px;
+    text-align: left;
+    margin: -100px 0 30px 100px;
+    font-family: $funtelogo;
+    animation-duration: 5s;
+}
+
+/* ---------NAV---------*/
+
+/* le saca el punto delante de la lista */
+
+a {
+    color: $colorHeader;
+    /* le saca el subrallado a los links */
+    text-decoration: none;
+
+}
+
+a:hover {
+    background-color: red;
+}
+
+.menu {
+    /*    background-color: red; */
+    font-family: $funteinicio;
+    font-size: 30px;
+    text-align: center;
+    justify-content: flex;
+
+
+    ul {
+        /*   background-color: red; */
+        list-style-type: none;
+
+    }
+
+    li {
+        /*  background-color: red; */
+        display: inline-block;
+        padding: 20px;
+    }
+}
+
+
+/* ---------MAIN---------*/
+
+.encabezado_titulo {
+    margin-bottom: auto;
+}
+
+.parrafo_contenido {
+    margin-bottom: auto;
+    font-size: 15px;
+}
+
+/* ------FOOTER-----*/
+
+.Footer p {
+    font-size: 20px;
+    margin: 20px 0 10px 0;
+    color: $colorlogo;
+    text-align: center;
+
+}
+
+.redes_sociales {
+    margin-bottom: auto;
+    margin-left: 1100px;
+    display: inline-block;
+    display: flex;
+
+    img {
+        height: 70px;
+        width: 100px;
+    }
+}

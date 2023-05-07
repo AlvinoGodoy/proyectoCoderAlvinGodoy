@@ -13,12 +13,15 @@ html {
 
 /* ---------HEADER------*/
 
-/* .logoinicial {
+
+/* define el color de heder por gerarquia */
+
+.logoinicial {
   background-color: rgb(1, 22, 39);
   padding: 20px;
 }
- */
-/* .logoinicial img {
+
+.logoinicial img {
   margin: 15px 25px 0 1100px;
   width: 400px;
   height: 120px;
@@ -30,27 +33,26 @@ html {
   text-align: left;
   margin: -100px 0 30px 50px;
   font-family: 'Sedgwick Ave Display', cursive;
-} */
+}
 
-/* .titulo {
+.titulo {
   text-align: left;
   font-size: 15px;
-} */
+}
 
 /* ---------NAV---------*/
 
 /* le saca el punto delante de la lista */
-
-/* ul {
+ul {
   list-style-type: none;
-} */
+}
 
 /* le saca el subrallado a los links */
-/* a {
+a {
   text-decoration: none;
 }
- */
-/* .Nav a {
+
+.Nav a {
 color: rgb(1, 22, 39);
 }
 
@@ -62,11 +64,11 @@ color: rgb(1, 22, 39);
 .menu li {
   display: inline-block;
   padding: 20px;
-} */
+}
 
 /* ---------MAIN---------*/
 
-/* .encabezado_titulo {
+.encabezado_titulo {
   margin-bottom: 35px;
 }
 
@@ -74,10 +76,10 @@ color: rgb(1, 22, 39);
   margin-bottom: 40px;
   font-size: 20px;
 }
- */
+
 /* ------FOOTER-----*/
 
-/* .Footer p {
+.Footer p {
   font-size: 20px;
   margin: 20px 0 10px 0;
   color: red;
@@ -91,7 +93,7 @@ margin-bottom: auto;
 .redes_sociales img {
   height: 70px;
   width: 100px;
-} */
+}
 
 /* estructura grilla */
 

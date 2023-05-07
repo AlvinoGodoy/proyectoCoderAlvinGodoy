@@ -1,0 +1,681 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62, 5%;
+  /* cambia la medida rem.
+                      antes 1 rem = 16px 
+                      ahora 1 rem = 10px */
+}
+
+/* ---------VARIABLES------- */
+/* ---------HEADER------*/
+.Header {
+  background-color: rgb(1, 22, 39);
+  padding: 20px;
+  display: flex;
+}
+.Header img {
+  margin: 10px 10px 5px 1000px;
+  text-align: right;
+  width: 400px;
+  height: 120px;
+  animation-duration: 4s;
+}
+
+.titulo_logo p {
+  color: red;
+  font-size: 65px;
+  text-align: left;
+  margin: -100px 0 30px 100px;
+  font-family: "Sedgwick Ave Display", cursive;
+  animation-duration: 5s;
+}
+
+/* ---------NAV---------*/
+/* le saca el punto delante de la lista */
+a {
+  color: rgb(1, 22, 39);
+  /* le saca el subrallado a los links */
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: red;
+}
+
+.menu {
+  /*    background-color: red; */
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  justify-content: flex;
+}
+.menu ul {
+  /*   background-color: red; */
+  list-style-type: none;
+}
+.menu li {
+  /*  background-color: red; */
+  display: inline-block;
+  padding: 20px;
+}
+
+/* ---------MAIN---------*/
+.encabezado_titulo {
+  margin-bottom: auto;
+}
+
+.parrafo_contenido {
+  margin-bottom: auto;
+  font-size: 15px;
+}
+
+/* ------FOOTER-----*/
+.Footer p {
+  font-size: 20px;
+  margin: 20px 0 10px 0;
+  color: red;
+  text-align: center;
+}
+
+.redes_sociales {
+  margin-bottom: auto;
+  margin-left: 1100px;
+  display: inline-block;
+  display: flex;
+}
+.redes_sociales img {
+  height: 70px;
+  width: 100px;
+}
+
+/* estructura grid - grilla */
+.contenedorindex {
+  display: grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 10px;
+  grid-template-columns: 50% 50%;
+  /* 2 columnas */
+  grid-template-rows: auto;
+  /* 4 filas */
+  grid-template-areas: "logob logob" "inicio inicio" "img img" "footer footer";
+}
+
+.Header {
+  grid-area: logob;
+}
+
+.Nav {
+  grid-area: inicio;
+  width: 100%;
+}
+
+.Main {
+  grid-area: img;
+  text-align: center;
+  justify-self: center;
+}
+
+.Footer {
+  grid-area: footer;
+}
+.Footer a :hover {
+  background-color: white;
+}
+
+/* ----------Medidas para Tablet-------- */
+@media screen and (max-width: 768px) {
+  .contenedorindex {
+    display: grid;
+    grid-column-gap: 5px;
+    grid-row-gap: 2px;
+    grid-template-columns: 50% 50%;
+    /* 2 columnas */
+    grid-template-rows: auto;
+    /* 4 filas */
+    grid-template-areas: "logob logob" "inicio inicio" "main main" "footer footer";
+  }
+  .Header {
+    grid-area: logob;
+  }
+  .Header img {
+    margin: 5px 10px 0px 400px;
+    width: 300px;
+    height: 100px;
+    animation-duration: 4s;
+  }
+  .titulo_logo p {
+    font-size: 50px;
+    text-align: left;
+    margin: -70px 0 20px 50px;
+  }
+  .Nav {
+    grid-area: inicio;
+  }
+  .Nav li a {
+    font-size: medium;
+  }
+  .Main {
+    grid-area: main;
+  }
+  .encabezado_titulo {
+    font-size: 20px;
+    text-align: center;
+    margin-top: -10px;
+  }
+  .parrafo_contenido p {
+    font-size: 15px;
+    text-align: center;
+    margin-top: -10px;
+  }
+  .Footer {
+    grid-area: footer;
+    text-align: center;
+  }
+  .parrafo_copy {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .redes_sociales {
+    margin-bottom: auto;
+    margin: 60px 0 10px 400px;
+    display: inline-block;
+  }
+  .redes_sociales img {
+    height: 70px;
+    width: 100px;
+  }
+}
+/* ----------Medidas para Celular-------- */
+@media screen and (max-width: 480px) {
+  .contenedorindex {
+    display: grid;
+    grid-template-columns: 100%;
+    /* 2 columnas */
+    grid-template-rows: auto;
+    /* 4 filas */
+    grid-template-areas: "logob" "inicio" "main" "footer";
+  }
+  .Header {
+    grid-area: logob;
+  }
+  .Header img {
+    margin: 5px 10px 0px 170px;
+    width: 300px;
+    height: 100px;
+  }
+  .titulo_logo p {
+    font-size: 35px;
+    text-align: left;
+    margin: -100px 0 30px 10px;
+    animation-duration: 5s;
+  }
+  .Nav {
+    grid-area: inicio;
+  }
+  .Nav li a {
+    font-size: 15px;
+    text-align: center;
+  }
+  .Main {
+    grid-area: main;
+  }
+  .encabezado_titulo h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: -10px;
+  }
+  .parrafo_contenido p {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .Footer p {
+    font-size: 15px;
+    text-align: center;
+  }
+  .redes_sociales {
+    margin-bottom: auto;
+    margin-left: 130px;
+    display: inline-block;
+    display: flex;
+  }
+  .redes_sociales img {
+    height: 50px;
+    width: 80px;
+  }
+  a:hover {
+    background-color: white;
+  }
+}
+/* estructura grid - grilla */
+.contenedorgrilla {
+  display: grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 10px;
+  grid-template-columns: 50% 50%;
+  /* 2 columnas */
+  grid-template-rows: auto;
+  /* 4 filas */
+  grid-template-areas: "logob logob" "inicio inicio" "info mapa" "footer footer";
+}
+
+.Header {
+  grid-area: logob;
+}
+
+.Nav {
+  grid-area: inicio;
+  width: 100%;
+}
+
+.mainciclovias {
+  grid-area: info;
+  justify-self: center;
+  margin-left: 20px;
+}
+.mainciclovias h1 {
+  margin-bottom: 30px;
+}
+
+.mapa {
+  grid-area: mapa;
+  text-align: right;
+  justify-self: center;
+  transform: translate(-50px, 90px);
+}
+
+.Footer {
+  grid-area: footer;
+}
+
+/* ----------Medidas para Tablet-------- */
+@media screen and (max-width: 768px) {
+  h1 {
+    padding: 10px;
+    font-size: 25px;
+    margin-top: -20px;
+  }
+  .contenedorgrilla {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.2fr 0.1fr 1fr 1fr 0.5fr;
+    grid-template-areas: "logob" "inicio" "main" "mapa" "footer";
+  }
+  .Header {
+    grid-template-areas: logob;
+  }
+  .Nav {
+    grid-template-areas: inicio;
+  }
+  .mainciclovias {
+    grid-area: main;
+  }
+  .parrafo_ciclo p {
+    font-size: 15px;
+    text-align: center;
+  }
+  .mapa {
+    grid-area: mapa;
+    text-align: right;
+    justify-self: center;
+    transform: translate(10px, 30px);
+  }
+  .Footer {
+    grid-template-areas: footer;
+  }
+}
+/* ----------Medidas para Celular-------- */
+@media screen and (max-width: 480px) {
+  .contenedorindex {
+    display: grid;
+    grid-template-columns: 100%;
+    /* 2 columnas */
+    grid-template-rows: auto;
+    /* 4 filas */
+    grid-template-areas: "logob" "inicio" "main" "mapa" "footer";
+  }
+  .Header {
+    grid-area: logob;
+  }
+  .Nav {
+    grid-area: inicio;
+  }
+  .Main {
+    grid-area: main;
+  }
+  .encabezado_ciclo h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: -10px;
+  }
+  .parrafo_ciclo p {
+    font-size: 12px;
+    text-align: left;
+    margin-top: 10px;
+  }
+  .mapa {
+    grid-area: mapa;
+    text-align: center;
+  }
+  .Footer {
+    grid-area: footer;
+  }
+}
+/* estructura grilla */
+.contenedorTotal {
+  display: grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "logob logob" "inicio inicio" "prado imgprado" "rambla imgrambla" "parque imgparque" "footer footer";
+}
+
+.Header {
+  grid-area: logob;
+}
+
+.Nav {
+  grid-area: inicio;
+}
+
+.titulo_prado {
+  text-align: center;
+  padding-bottom: 10px;
+  margin-top: -20px;
+}
+
+.parrafo_prado {
+  grid-area: prado;
+}
+.parrafo_prado p {
+  display: flex;
+  text-align: left;
+  margin-left: 80px;
+}
+
+.titulo_rambla {
+  text-align: center;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.parrafo_rambla {
+  grid-area: rambla;
+}
+.parrafo_rambla p {
+  display: flex;
+  text-align: left;
+  margin-left: 80px;
+}
+
+.titulo_parque {
+  text-align: center;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.parrafo_parque {
+  grid-area: parque;
+  display: flex;
+  text-align: left;
+  margin-left: 80px;
+}
+
+.imgprado {
+  grid-area: imgprado;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.imgrambla {
+  grid-area: imgrambla;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.imgparque {
+  grid-area: imgparque;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.Footer {
+  grid-area: footer;
+}
+
+/* ----------Medidas para Tablet-------- */
+@media screen and (max-width: 768px) {
+  .contenedorTotal {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.1fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.1fr;
+    grid-template-areas: "logob" "inicio" "prado" "imgprado" "rambla" "imgrambla" "parque" "imgparque" "footer";
+  }
+  .Header {
+    grid-area: logob;
+  }
+  .Nav {
+    grid-area: inicio;
+  }
+  .titulo_prado {
+    margin-right: 70px;
+  }
+  .parrafo_prado {
+    grid-area: prado;
+  }
+  .parrafo_prado p {
+    margin-left: 10px;
+  }
+  .imgprado {
+    grid-area: imgprado;
+  }
+  .titulo_rambla {
+    margin-right: 70px;
+  }
+  .parrafo_rambla {
+    grid-area: rambla;
+  }
+  .parrafo_rambla p {
+    margin-left: 10px;
+  }
+  .imgrambla {
+    grid-area: imgrambla;
+  }
+  .titulo_parque {
+    margin-right: 70px;
+  }
+  .parrafo_parque {
+    grid-area: parque;
+  }
+  .parrafo_parque p {
+    margin-left: -50px;
+    text-align: left;
+  }
+  .imgparque {
+    grid-area: imgparque;
+  }
+  .Footer {
+    grid-area: footer;
+  }
+}
+/* ----------Medidas para Celular-------- */
+@media screen and (max-width: 480px) {
+  .contenedorTotal {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.05fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.1fr;
+    grid-template-areas: "logob" "inicio" "prado" "imgprado" "rambla" "imgrambla" "parque" "imgparque" "footer";
+  }
+  .Header {
+    grid-area: logob;
+  }
+  .Nav {
+    grid-area: inicio;
+  }
+  .titulo_prado {
+    grid-area: prado;
+    margin-right: 90px;
+  }
+  .parrafo_prado p {
+    font-size: 15px;
+    margin-left: auto;
+    padding: 2% 10%;
+    margin-bottom: 5px;
+  }
+  .imgprado {
+    grid-area: imgprado;
+  }
+  .titulo_rambla {
+    grid-area: rambla;
+    margin-right: 90px;
+  }
+  .parrafo_rambla p {
+    font-size: 15px;
+    margin-left: auto;
+    padding: 2% 10%;
+    margin-bottom: 5px;
+  }
+  .imgrambla {
+    grid-area: imgrambla;
+  }
+  .parque {
+    grid-area: parque;
+    margin-right: 90px;
+  }
+  .parrafo_parque p {
+    font-size: 15px;
+    margin-left: -30px;
+    padding: 2% 0%;
+    margin-bottom: 5px;
+  }
+  .imgparque {
+    grid-area: imgparque;
+  }
+  .footer {
+    grid-area: footer;
+  }
+}
+/* estructura grilla */
+.contenedor_venta {
+  display: grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "logob logob" "inicio inicio" "main imgmapa" "main imgventas" "footer footer";
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+.parrafo_ventas {
+  font-size: 20px;
+}
+
+.mapa_ventas {
+  text-align: center;
+}
+
+.imagen_ventas {
+  text-align: center;
+}
+
+.Header {
+  grid-area: logob;
+}
+
+.Nav {
+  grid-area: inicio;
+}
+
+.main_ventas {
+  grid-area: main;
+}
+
+.imagen_ventas {
+  grid-area: imgventas;
+}
+
+/* ----------Medidas para Tablet-------- */
+@media screen and (max-width: 768px) {
+  h1 {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  .parrafo_ventas {
+    font-size: 15px;
+  }
+  .mapa_ventas {
+    padding: 2% -4%;
+  }
+}
+/* ----------Medidas para Celular-------- */
+@media screen and (max-width: 480px) {
+  .contenedor_venta {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "logob" "inicio" "main" "maps" "imgv" "footer";
+  }
+  .Header {
+    grid-area: logob;
+  }
+  .Nav {
+    grid-area: inicio;
+  }
+  .main_ventas {
+    grid-area: main;
+  }
+  .mapa_ventas {
+    grid-area: maps;
+  }
+  .imagen_ventas {
+    grid-area: imgv;
+  }
+  .Footer {
+    grid-area: footer;
+  }
+  .encabezado_titulo h1 {
+    margin-left: -20px;
+  }
+  .parrafo_ventas p {
+    font-size: 12px;
+    text-align: left;
+    padding: 2% 3%;
+    margin-bottom: 5px;
+  }
+  .mapa_ventas {
+    padding: 2% -10%;
+    text-align: left;
+    margin-left: 15px;
+  }
+  .imagen_ventas {
+    text-align: left;
+    margin-left: 15px;
+  }
+}
+/* ----------Medidas para Tablet-------- */
+@media screen and (max-width: 768px) {
+  h1 {
+    text-align: center;
+  }
+  .forms {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

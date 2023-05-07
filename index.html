@@ -20,22 +20,24 @@
 
 
   <!--------ESLILOS PROPIOS CSS------>
-  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  
+  <!-- -------animaciones----- -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
 </head>
 
-<body class="container-fluid">
+<body class="contenedorindex">
 
   <div class="Header">
-    <header class="logoinicial row">
+    <header>
 
-      <img src="multimedia/logobici.png" alt="LogoBici" title="LogoPrincipal" class="logo" />
+      <img src="multimedia/logobici.png" alt="LogoBici" title="LogoPrincipal" class="logo animate__animated animate__backInLeft" />
 
-      <div class="titulo_logo row">
-        <div class="container-text-left">
-          <div class="row justify-content-start">
-            <p>Move my Bike </p>
-          </div>
-        </div>
+      <div class="titulo_logo">
+            <p class="animate__animated animate__zoomIn">Move my Bike </p>
       </div>
 
     </header>
@@ -53,7 +55,7 @@
             <li><a href="coder/index.html">Inicio</a></li>
             <li><a href="paginas/ciclovias.html">Ciclo Vias</a></li>
             <li><a href="paginas/paseos.html">Paseos</a></li>
-            <li><a href="paginas/acercadeventaarticulos.html">Acerca de Venta Articulos</a></li>
+            <li><a href="paginas/acercadeventaarticulos.html">Acerca de Ventas Articulos</a></li>
             <li><a href="paginas/contacto.html">Contacto</a></li>
           </ul>
 
@@ -76,8 +78,10 @@
         <div class="parrafo_contenido">
           <div class="container text-center">
             <p>
-              ¡Bienvenidos a la presentación de la página web "Move my Bike"! Una plataforma dedicada a los amantes del
-              ciclismo y los paseos en bicicleta por distintos puntos de la ciudad. En esta presentación, exploraremos
+              ¡Bienvenidos a la presentación de la página web "Move my Bike"! Una plataforma dedicada a los amantes
+              del
+              ciclismo y los paseos en bicicleta por distintos puntos de la ciudad. En esta presentación,
+              exploraremos
               las
               características y beneficios de esta página web, que ofrece una emocionante experiencia de ciclismo
               urbano.
@@ -86,8 +90,8 @@
         </div>
 
         <div class="imagen_prinicipal">
-          <img src="multimedia/imagenindex.jpg" alt="Imagen paseo en Bicicleta" title="Paseo en bicicleta"
-            width="1520px" height="1000px">
+          <img src="multimedia/imagenindex.jpg" class="img-fluid" alt="Imagen paseo en Bicicleta"
+            title="Paseo en bicicleta" width="500px" height="1000px">
         </div>
 
       </section>
@@ -105,7 +109,6 @@
       </div>
 
       <div class="redes_sociales">
-        <div class="container container text-center">
           <a href="http://google.com" target="_blank" rel="noopener noreferrer"></a>
           <a href="https://twitter.com/?lang=es"><img src="multimedia/TW.png" alt="Logo twitter" width=""
               height="70"></a>
@@ -125,7 +128,6 @@
             href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Sedgwick+Ave+Display&display=swap"
             rel="stylesheet">
         </div>
-      </div>
 
     </footer>
   </div>

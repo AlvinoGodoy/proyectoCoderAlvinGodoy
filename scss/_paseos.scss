@@ -1,0 +1,249 @@
+/* estructura grilla */
+
+.contenedorTotal {
+    display: grid;
+    grid-column-gap: 15px;
+    grid-row-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "logob logob"
+        "inicio inicio"
+        "prado imgprado"
+        "rambla imgrambla"
+        "parque imgparque"
+        "footer footer";
+}
+
+.Header {
+    grid-area: logob;
+}
+
+.Nav {
+    grid-area: inicio;
+}
+
+.titulo_prado {
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: -20px;
+}
+
+.parrafo_prado {
+    grid-area: prado;
+
+    p {
+        display: flex;
+        text-align: left;
+        margin-left: 80px;
+    }
+}
+
+.titulo_rambla {
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 10px
+}
+
+.parrafo_rambla {
+    grid-area: rambla;
+
+    p {
+        display: flex;
+        text-align: left;
+        margin-left: 80px;
+    }
+}
+
+.titulo_parque {
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 10px
+}
+
+.parrafo_parque {
+    grid-area: parque;
+    display: flex;
+    text-align: left;
+    margin-left: 80px;
+}
+
+.imgprado {
+    grid-area: imgprado;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.imgrambla {
+    grid-area: imgrambla;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.imgparque {
+    grid-area: imgparque;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.Footer {
+    grid-area: footer;
+}
+
+/* ----------Medidas para Tablet-------- */
+
+@media screen and (max-width: 768px) {
+
+    .contenedorTotal {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0.1fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.1fr;
+        grid-template-areas: "logob" "inicio" "prado" "imgprado" "rambla" "imgrambla" "parque" "imgparque" "footer";
+    }
+
+    .Header {
+        grid-area: logob;
+    }
+
+    .Nav {
+        grid-area: inicio;
+    }
+
+    .titulo_prado {
+        margin-right: 70px;
+    }
+
+    .parrafo_prado {
+        grid-area: prado;
+
+        p {
+            margin-left: 10px;
+        }
+    }
+
+    .imgprado {
+        grid-area: imgprado;
+    }
+
+    .titulo_rambla {
+        margin-right: 70px;
+    }
+
+    .parrafo_rambla {
+        grid-area: rambla;
+
+        p {
+            margin-left: 10px;
+        }
+    }
+
+    .imgrambla {
+        grid-area: imgrambla;
+    }
+
+    .titulo_parque {
+        margin-right: 70px;
+    }
+
+    .parrafo_parque {
+        grid-area: parque;
+
+        p {
+            margin-left: -50px;
+            text-align: left;
+        }
+    }
+
+    .imgparque {
+        grid-area: imgparque;
+    }
+
+    .Footer {
+        grid-area: footer;
+    }
+}
+
+/* ----------Medidas para Celular-------- */
+
+@media screen and (max-width: 480px) {
+
+    .contenedorTotal {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.05fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.1fr;
+        grid-template-areas: "logob" "inicio" "prado" "imgprado" "rambla" "imgrambla" "parque" "imgparque" "footer";
+        ;
+    }
+
+    .Header {
+        grid-area: logob;
+    }
+
+    .Nav {
+        grid-area: inicio;
+    }
+
+    .titulo_prado {
+        grid-area: prado;
+        margin-right: 90px;
+    }
+
+    .parrafo_prado {
+        p {
+            font-size: 15px;
+            margin-left: auto;
+            padding: 2% 10%;
+            margin-bottom: 5px;
+        }
+    }
+
+    .imgprado {
+        grid-area: imgprado;
+    }
+
+    .titulo_rambla {
+        grid-area: rambla;
+        margin-right: 90px;
+    }
+
+    .parrafo_rambla {
+        p {
+            font-size: 15px;
+            margin-left: auto;
+            padding: 2% 10%;
+            margin-bottom: 5px;
+        }
+    }
+
+    .imgrambla {
+        grid-area: imgrambla;
+    }
+
+    .parque {
+        grid-area: parque;
+        margin-right: 90px;
+    }
+
+    .parrafo_parque {
+        p {
+            font-size: 15px;
+            margin-left: -30px;
+            padding: 2% 0%;
+            margin-bottom: 5px;
+        }
+    }
+
+    .imgparque {
+        grid-area: imgparque;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+}

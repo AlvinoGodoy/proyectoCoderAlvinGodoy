@@ -1,0 +1,142 @@
+/* estructura grid - grilla */
+
+.contenedorgrilla {
+    display: grid;
+    grid-column-gap: 15px;
+    grid-row-gap: 10px;
+    grid-template-columns: 50% 50%;
+    /* 2 columnas */
+    grid-template-rows: auto;
+    /* 4 filas */
+    grid-template-areas:
+        "logob logob"
+        "inicio inicio"
+        "info mapa"
+        "footer footer"
+}
+
+.Header {
+    grid-area: logob;
+}
+
+.Nav {
+    grid-area: inicio;
+    width: 100%;
+}
+
+.mainciclovias {
+    grid-area: info;
+    justify-self: center;
+    margin-left: 20px;
+
+    h1 {
+        margin-bottom: 30px;
+    }
+}
+
+.mapa {
+    grid-area: mapa;
+    text-align: right;
+    justify-self: center;
+    transform: translate(-50px, 90px);
+}
+
+.Footer {
+    grid-area: footer;
+}
+
+/* ----------Medidas para Tablet-------- */
+
+@media screen and (max-width: 768px) {
+
+    h1 {
+        padding: 10px;
+        font-size: 25px;
+        margin-top: -20px;
+    }
+
+    .contenedorgrilla {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 0.2fr 0.1fr 1fr 1fr 0.5fr;
+        grid-template-areas: "logob" "inicio" "main" "mapa" "footer";
+    }
+
+    .Header {
+        grid-template-areas: logob;
+    }
+
+    .Nav {
+        grid-template-areas: inicio;
+    }
+
+    .mainciclovias {
+        grid-area: main;
+    }
+
+    .parrafo_ciclo p {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .mapa {
+        grid-area: mapa;
+        text-align: right;
+        justify-self: center;
+        transform: translate(10px, 30px);
+    }
+
+    .Footer {
+        grid-template-areas: footer;
+
+    }
+
+}
+
+/* ----------Medidas para Celular-------- */
+
+@media screen and (max-width: 480px) {
+
+    .contenedorindex {
+        display: grid;
+        grid-template-columns: 100%;
+        /* 2 columnas */
+        grid-template-rows: auto;
+        /* 4 filas */
+        grid-template-areas: "logob" "inicio" "main" "mapa" "footer";
+    }
+
+    .Header {
+        grid-area: logob;
+    }
+
+    .Nav {
+        grid-area: inicio;
+    }
+
+    .Main {
+        grid-area: main;
+    }
+
+    .encabezado_ciclo h1 {
+        font-size: 20px;
+        text-align: center;
+        margin-top: -10px;
+    }
+
+    .parrafo_ciclo p {
+        font-size: 12px;
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .mapa {
+        grid-area: mapa;
+        text-align: center;
+    }
+
+    .Footer {
+        grid-area: footer;
+    }
+
+}
