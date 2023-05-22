@@ -23,49 +23,62 @@
     grid-area: inicio;
 }
 
+.slidee {
+    text-align: center;
+
+    img {
+        width: 750px;
+        height: 450px;
+    }
+}
+
+
 .titulo_prado {
     text-align: center;
-    padding-bottom: 10px;
-    margin-top: -20px;
+    margin-top: 20px;
 }
 
 .parrafo_prado {
     grid-area: prado;
+    margin-top: 20px;
 
     p {
         display: flex;
         text-align: left;
-        margin-left: 80px;
+        margin: 10px 0 0 10px;
     }
 }
 
 .titulo_rambla {
     text-align: center;
-    padding-bottom: 10px;
-    margin-top: 10px
+    margin-top: 40px;
 }
 
 .parrafo_rambla {
     grid-area: rambla;
+    margin-top: 20px;
 
     p {
         display: flex;
         text-align: left;
-        margin-left: 80px;
+        margin: 15px 0 0 10px;
     }
 }
 
 .titulo_parque {
     text-align: center;
-    padding-bottom: 10px;
-    margin-top: 10px
+    margin-top: 20px;
 }
 
 .parrafo_parque {
     grid-area: parque;
-    display: flex;
-    text-align: left;
-    margin-left: 80px;
+    margin-top: 15px;
+
+    p {
+        display: flex;
+        text-align: left;
+        margin: 10px 0 0 10px;
+    }
 }
 
 .imgprado {
@@ -74,6 +87,7 @@
     display: flex;
     justify-content: center;
     align-self: center;
+    margin-top: 90px;
 }
 
 .imgrambla {
@@ -82,6 +96,7 @@
     display: flex;
     justify-content: center;
     align-self: center;
+    margin-top: 40px;
 }
 
 .imgparque {
@@ -90,6 +105,7 @@
     display: flex;
     justify-content: center;
     align-self: center;
+    margin-top: 60px;
 }
 
 .Footer {
@@ -116,30 +132,36 @@
     }
 
     .titulo_prado {
-        margin-right: 70px;
+        margin-top: 10px;
+        font-size: 35px;
     }
 
     .parrafo_prado {
         grid-area: prado;
+        margin-top: 5px;
 
         p {
-            margin-left: 10px;
+            margin-left: 5px;
+
         }
     }
 
     .imgprado {
         grid-area: imgprado;
+        margin-top: 20px;
     }
 
     .titulo_rambla {
-        margin-right: 70px;
+        margin-top: 35px;
+        font-size: 35px;
     }
 
     .parrafo_rambla {
         grid-area: rambla;
+        margin-top: 5px;
 
         p {
-            margin-left: 10px;
+            margin-left: 5px;
         }
     }
 
@@ -148,15 +170,16 @@
     }
 
     .titulo_parque {
-        margin-right: 70px;
+        margin-top: 35px;
+        font-size: 35px;
     }
 
     .parrafo_parque {
         grid-area: parque;
+        margin-top: 5px;
 
         p {
-            margin-left: -50px;
-            text-align: left;
+            margin-left: auto;
         }
     }
 
@@ -176,7 +199,7 @@
     .contenedorTotal {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.1fr 0.05fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.1fr;
+        grid-template-rows: auto;
         grid-template-areas: "logob" "inicio" "prado" "imgprado" "rambla" "imgrambla" "parque" "imgparque" "footer";
         ;
     }
@@ -187,60 +210,81 @@
 
     .Nav {
         grid-area: inicio;
+        text-align: center;
+    }
+
+    .slidee {
+        text-align: center;
+
+        img {
+            width: 450px;
+            height: 300px;
+        }
+
     }
 
     .titulo_prado {
+        text-align: center;
         grid-area: prado;
-        margin-right: 90px;
+        margin: 20px;
     }
 
     .parrafo_prado {
+
         p {
             font-size: 15px;
-            margin-left: auto;
-            padding: 2% 10%;
+            margin-left: -30px;
+            padding:2% 15%;
             margin-bottom: 5px;
+            margin-top: -10px;
         }
     }
 
     .imgprado {
         grid-area: imgprado;
+        margin-top: 10px;
+
     }
 
     .titulo_rambla {
         grid-area: rambla;
-        margin-right: 90px;
+        margin: 20px;
     }
 
     .parrafo_rambla {
+
         p {
             font-size: 15px;
-            margin-left: auto;
-            padding: 2% 10%;
+            margin-left: -30px;
+            padding: 2% 15%;
             margin-bottom: 5px;
+            margin-top: -10px;
         }
     }
 
     .imgrambla {
         grid-area: imgrambla;
+        margin-top: 10px;
     }
 
-    .parque {
+    .titulo_parque {
         grid-area: parque;
-        margin-right: 90px;
+        margin: 20px;
     }
 
     .parrafo_parque {
         p {
             font-size: 15px;
             margin-left: -30px;
-            padding: 2% 0%;
+            padding: 2% 15%;
             margin-bottom: 5px;
+            margin-top: -10px;
         }
     }
 
     .imgparque {
         grid-area: imgparque;
+        margin-top: 10px;
     }
 
     .footer {

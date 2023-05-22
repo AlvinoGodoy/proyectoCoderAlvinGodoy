@@ -38,7 +38,7 @@ html {
 /* ---------NAV---------*/
 /* le saca el punto delante de la lista */
 a {
-  color: rgb(1, 22, 39);
+  color: rgb(1, 22, 39) !important;
   /* le saca el subrallado a los links */
   text-decoration: none;
 }
@@ -47,18 +47,16 @@ a:hover {
   background-color: red;
 }
 
-.menu {
+.Nav {
   /*    background-color: red; */
   font-family: "Roboto", sans-serif;
-  font-size: 30px;
-  text-align: center;
-  justify-content: flex;
+  font-size: 25px;
 }
-.menu ul {
+.Nav ul {
   /*   background-color: red; */
   list-style-type: none;
 }
-.menu li {
+.Nav li {
   /*  background-color: red; */
   display: inline-block;
   padding: 20px;
@@ -71,7 +69,7 @@ a:hover {
 
 .parrafo_contenido {
   margin-bottom: auto;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 /* ------FOOTER-----*/
@@ -120,6 +118,15 @@ a:hover {
   justify-self: center;
 }
 
+.img_index {
+  background: rgb(0, 195, 255);
+  background: linear-gradient(180deg, rgb(0, 195, 255) 17%, rgb(9, 9, 106) 44%, rgb(2, 0, 36) 76%);
+  margin-top: 20px;
+}
+.img_index img {
+  border-radius: 5%;
+}
+
 .Footer {
   grid-area: footer;
 }
@@ -158,6 +165,7 @@ a:hover {
   }
   .Nav li a {
     font-size: medium;
+    text-align: center;
   }
   .Main {
     grid-area: main;
@@ -165,12 +173,12 @@ a:hover {
   .encabezado_titulo {
     font-size: 20px;
     text-align: center;
-    margin-top: -10px;
+    margin-top: 25px;
   }
   .parrafo_contenido p {
     font-size: 15px;
     text-align: center;
-    margin-top: -10px;
+    margin-top: auto;
   }
   .Footer {
     grid-area: footer;
@@ -182,9 +190,11 @@ a:hover {
     margin-top: 40px;
   }
   .redes_sociales {
-    margin-bottom: auto;
-    margin: 60px 0 10px 400px;
+    margin: auto;
     display: inline-block;
+    margin: 50px 0 0 230px;
+    display: inline-block;
+    display: flex;
   }
   .redes_sociales img {
     height: 70px;
@@ -217,31 +227,44 @@ a:hover {
   }
   .Nav {
     grid-area: inicio;
-  }
-  .Nav li a {
     font-size: 15px;
     text-align: center;
+  }
+  .Nav ul {
+    margin-top: 25px;
+  }
+  .Nav a {
+    margin-top: -40px;
   }
   .Main {
     grid-area: main;
   }
-  .encabezado_titulo h1 {
-    font-size: 20px;
-    text-align: center;
-    margin-top: -10px;
+  .img_index {
+    border-radius: 15%;
   }
-  .parrafo_contenido p {
-    font-size: 12px;
+  .img_index img {
+    border-radius: 10%;
+    width: 450px;
+  }
+  .encabezado_titulo h1 {
+    font-size: 25px;
     text-align: center;
     margin-top: 10px;
+  }
+  .parrafo_contenido p {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .Footer {
+    grid-area: footer;
   }
   .Footer p {
     font-size: 15px;
     text-align: center;
   }
   .redes_sociales {
-    margin-bottom: auto;
-    margin-left: 130px;
+    margin-left: 120px;
     display: inline-block;
     display: flex;
   }
@@ -283,11 +306,16 @@ a:hover {
   margin-bottom: 30px;
 }
 
+.parrafo_ciclo p {
+  font-size: 15px;
+  text-align: left;
+}
+
 .mapa {
   grid-area: mapa;
   text-align: right;
   justify-self: center;
-  transform: translate(-50px, 90px);
+  transform: translate(-20px, 80px);
 }
 
 .Footer {
@@ -296,11 +324,6 @@ a:hover {
 
 /* ----------Medidas para Tablet-------- */
 @media screen and (max-width: 768px) {
-  h1 {
-    padding: 10px;
-    font-size: 25px;
-    margin-top: -20px;
-  }
   .contenedorgrilla {
     display: grid;
     grid-template-columns: 100%;
@@ -319,6 +342,7 @@ a:hover {
   .parrafo_ciclo p {
     font-size: 15px;
     text-align: center;
+    margin: auto;
   }
   .mapa {
     grid-area: mapa;
@@ -327,14 +351,18 @@ a:hover {
     transform: translate(10px, 30px);
   }
   .Footer {
-    grid-template-areas: footer;
+    grid-area: footer;
+  }
+  .encabezado_ciclo h1 {
+    font-size: 30px;
+    margin-top: 30px;
   }
 }
 /* ----------Medidas para Celular-------- */
 @media screen and (max-width: 480px) {
   .contenedorindex {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     /* 2 columnas */
     grid-template-rows: auto;
     /* 4 filas */
@@ -350,21 +378,30 @@ a:hover {
     grid-area: main;
   }
   .encabezado_ciclo h1 {
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
-    margin-top: -10px;
+    margin-top: 10px;
   }
   .parrafo_ciclo p {
-    font-size: 12px;
     text-align: left;
-    margin-top: 10px;
+    font-size: 15px;
+    margin-left: 20px;
+    padding: 2% 10%;
+    margin-bottom: 5px;
+    margin-top: -10px;
   }
   .mapa {
     grid-area: mapa;
+  }
+  .mapa iframe {
     text-align: center;
+    margin: -20px auto auto 10px;
+    width: 450px;
+    height: 800px;
   }
   .Footer {
     grid-area: footer;
+    margin-top: 80px;
   }
 }
 /* estructura grilla */
@@ -385,47 +422,57 @@ a:hover {
   grid-area: inicio;
 }
 
+.slidee {
+  text-align: center;
+}
+.slidee img {
+  width: 750px;
+  height: 450px;
+}
+
 .titulo_prado {
   text-align: center;
-  padding-bottom: 10px;
-  margin-top: -20px;
+  margin-top: 20px;
 }
 
 .parrafo_prado {
   grid-area: prado;
+  margin-top: 20px;
 }
 .parrafo_prado p {
   display: flex;
   text-align: left;
-  margin-left: 80px;
+  margin: 10px 0 0 10px;
 }
 
 .titulo_rambla {
   text-align: center;
-  padding-bottom: 10px;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 
 .parrafo_rambla {
   grid-area: rambla;
+  margin-top: 20px;
 }
 .parrafo_rambla p {
   display: flex;
   text-align: left;
-  margin-left: 80px;
+  margin: 15px 0 0 10px;
 }
 
 .titulo_parque {
   text-align: center;
-  padding-bottom: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .parrafo_parque {
   grid-area: parque;
+  margin-top: 15px;
+}
+.parrafo_parque p {
   display: flex;
   text-align: left;
-  margin-left: 80px;
+  margin: 10px 0 0 10px;
 }
 
 .imgprado {
@@ -434,6 +481,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-self: center;
+  margin-top: 90px;
 }
 
 .imgrambla {
@@ -442,6 +490,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-self: center;
+  margin-top: 40px;
 }
 
 .imgparque {
@@ -450,6 +499,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-self: center;
+  margin-top: 60px;
 }
 
 .Footer {
@@ -471,38 +521,44 @@ a:hover {
     grid-area: inicio;
   }
   .titulo_prado {
-    margin-right: 70px;
+    margin-top: 10px;
+    font-size: 35px;
   }
   .parrafo_prado {
     grid-area: prado;
+    margin-top: 5px;
   }
   .parrafo_prado p {
-    margin-left: 10px;
+    margin-left: 5px;
   }
   .imgprado {
     grid-area: imgprado;
+    margin-top: 20px;
   }
   .titulo_rambla {
-    margin-right: 70px;
+    margin-top: 35px;
+    font-size: 35px;
   }
   .parrafo_rambla {
     grid-area: rambla;
+    margin-top: 5px;
   }
   .parrafo_rambla p {
-    margin-left: 10px;
+    margin-left: 5px;
   }
   .imgrambla {
     grid-area: imgrambla;
   }
   .titulo_parque {
-    margin-right: 70px;
+    margin-top: 35px;
+    font-size: 35px;
   }
   .parrafo_parque {
     grid-area: parque;
+    margin-top: 5px;
   }
   .parrafo_parque p {
-    margin-left: -50px;
-    text-align: left;
+    margin-left: auto;
   }
   .imgparque {
     grid-area: imgparque;
@@ -516,7 +572,7 @@ a:hover {
   .contenedorTotal {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 0.05fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.1fr;
+    grid-template-rows: auto;
     grid-template-areas: "logob" "inicio" "prado" "imgprado" "rambla" "imgrambla" "parque" "imgparque" "footer";
   }
   .Header {
@@ -524,45 +580,60 @@ a:hover {
   }
   .Nav {
     grid-area: inicio;
+    text-align: center;
+  }
+  .slidee {
+    text-align: center;
+  }
+  .slidee img {
+    width: 450px;
+    height: 300px;
   }
   .titulo_prado {
+    text-align: center;
     grid-area: prado;
-    margin-right: 90px;
+    margin: 20px;
   }
   .parrafo_prado p {
     font-size: 15px;
-    margin-left: auto;
-    padding: 2% 10%;
+    margin-left: -30px;
+    padding: 2% 15%;
     margin-bottom: 5px;
+    margin-top: -10px;
   }
   .imgprado {
     grid-area: imgprado;
+    margin-top: 10px;
   }
   .titulo_rambla {
     grid-area: rambla;
-    margin-right: 90px;
+    margin: 20px;
   }
   .parrafo_rambla p {
     font-size: 15px;
-    margin-left: auto;
-    padding: 2% 10%;
+    margin-left: -30px;
+    padding: 2% 15%;
     margin-bottom: 5px;
+    margin-top: -10px;
   }
   .imgrambla {
     grid-area: imgrambla;
+    margin-top: 10px;
   }
-  .parque {
+  .titulo_parque {
     grid-area: parque;
-    margin-right: 90px;
+    margin: 20px;
   }
   .parrafo_parque p {
     font-size: 15px;
     margin-left: -30px;
-    padding: 2% 0%;
+    padding: 2% 15%;
     margin-bottom: 5px;
+    margin-top: -10px;
   }
   .imgparque {
     grid-area: imgparque;
+    margin-top: 10px;
   }
   .footer {
     grid-area: footer;
@@ -578,12 +649,27 @@ a:hover {
   grid-template-areas: "logob logob" "inicio inicio" "main imgmapa" "main imgventas" "footer footer";
 }
 
-h1 {
-  margin-bottom: 50px;
+.encabezado_titulo h1 {
+  text-align: center;
+  margin-top: auto;
+  color: white;
+}
+
+.slide {
+  text-align: center;
+}
+.slide img {
+  width: 750px;
+  height: 445px;
 }
 
 .parrafo_ventas {
   font-size: 20px;
+  text-align: center;
+}
+.parrafo_ventas p {
+  margin: 35px 0 15px 0;
+  color: white;
 }
 
 .mapa_ventas {
@@ -604,6 +690,7 @@ h1 {
 
 .main_ventas {
   grid-area: main;
+  background-color: black;
 }
 
 .imagen_ventas {
@@ -612,15 +699,24 @@ h1 {
 
 /* ----------Medidas para Tablet-------- */
 @media screen and (max-width: 768px) {
-  h1 {
-    margin-bottom: 15px;
+  .encabezado_titulo h1 {
     font-size: 20px;
   }
   .parrafo_ventas {
     font-size: 15px;
   }
-  .mapa_ventas {
-    padding: 2% -4%;
+  .mapa_ventas iframe {
+    text-align: center;
+    margin: auto auto auto -20px;
+    width: 450px;
+    height: 500px;
+  }
+  .slide {
+    margin: auto 10px auto auto;
+  }
+  .slide img {
+    width: 450px;
+    height: 500px;
   }
 }
 /* ----------Medidas para Celular-------- */
@@ -643,6 +739,13 @@ h1 {
   .mapa_ventas {
     grid-area: maps;
   }
+  .mapa_ventas iframe {
+    grid-area: mapa;
+    text-align: center;
+    margin: auto;
+    width: 500px;
+    height: 400px;
+  }
   .imagen_ventas {
     grid-area: imgv;
   }
@@ -650,31 +753,68 @@ h1 {
     grid-area: footer;
   }
   .encabezado_titulo h1 {
-    margin-left: -20px;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
   }
   .parrafo_ventas p {
-    font-size: 12px;
-    text-align: left;
-    padding: 2% 3%;
+    font-size: 15px;
+    margin-left: -30px;
+    padding: 2% 10%;
     margin-bottom: 5px;
+    margin-top: 10px;
   }
-  .mapa_ventas {
-    padding: 2% -10%;
-    text-align: left;
-    margin-left: 15px;
+  .slide {
+    text-align: center;
   }
-  .imagen_ventas {
-    text-align: left;
-    margin-left: 15px;
+  .slide img {
+    margin: auto;
+    width: 500px;
+    height: 400px;
   }
 }
+.main_contacto {
+  text-align: center;
+}
+
+.forms {
+  margin-top: 30px;
+}
+
+.form-label {
+  margin-top: 40px;
+}
+
+.form-check-label {
+  margin-top: 10px;
+}
+
+.form-check-input {
+  margin-top: 15px;
+}
+
 /* ----------Medidas para Tablet-------- */
 @media screen and (max-width: 768px) {
   h1 {
     text-align: center;
+    font-size: 30px;
   }
   .forms {
-    text-align: center;
+    margin-top: -20px;
+  }
+  .main_contacto img {
+    height: 700px;
+    width: 800px;
+  }
+}
+/* ----------Medidas para Celular-------- */
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 25px;
+  }
+  .main_contacto img {
+    height: 450px;
+    width: 500px;
   }
 }
 

@@ -51,7 +51,7 @@ $funteinicio: "Roboto", sans-serif;
 /* le saca el punto delante de la lista */
 
 a {
-    color: $colorHeader;
+    color: $colorHeader !important;
     /* le saca el subrallado a los links */
     text-decoration: none;
 
@@ -61,12 +61,10 @@ a:hover {
     background-color: red;
 }
 
-.menu {
+.Nav {
     /*    background-color: red; */
     font-family: $funteinicio;
-    font-size: 30px;
-    text-align: center;
-    justify-content: flex;
+    font-size: 25px;
 
 
     ul {
@@ -91,8 +89,10 @@ a:hover {
 
 .parrafo_contenido {
     margin-bottom: auto;
-    font-size: 15px;
+    font-size: 20px;
 }
+
+
 
 /* ------FOOTER-----*/
 

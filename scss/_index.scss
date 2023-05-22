@@ -22,12 +22,23 @@
 .Nav {
     grid-area: inicio;
     width: 100%;
+
 }
 
 .Main {
     grid-area: img;
     text-align: center;
     justify-self: center;
+}
+
+.img_index {
+    background: rgb(0, 195, 255);
+    background: linear-gradient(180deg, rgba(0, 195, 255, 1) 17%, rgba(9, 9, 106, 1) 44%, rgba(2, 0, 36, 1) 76%);
+    margin-top: 20px;
+
+    img {
+        border-radius: 5%;
+    }
 }
 
 .Footer {
@@ -79,6 +90,7 @@
 
     .Nav li a {
         font-size: medium;
+        text-align: center;
     }
 
     .Main {
@@ -88,13 +100,13 @@
     .encabezado_titulo {
         font-size: 20px;
         text-align: center;
-        margin-top: -10px;
+        margin-top: 25px;
     }
 
     .parrafo_contenido p {
         font-size: 15px;
         text-align: center;
-        margin-top: -10px;
+        margin-top: auto;
     }
 
     .Footer {
@@ -109,9 +121,11 @@
     }
 
     .redes_sociales {
-        margin-bottom: auto;
-        margin: 60px 0 10px 400px;
+        margin: auto;
         display: inline-block;
+        margin: 50px 0 0 230px;
+        display: inline-block;
+        display: flex;
 
         img {
             height: 70px;
@@ -153,38 +167,53 @@
 
     .Nav {
         grid-area: inicio;
-    }
-
-    .Nav li a {
         font-size: 15px;
         text-align: center;
+
+        ul {
+            margin-top: 25px;
+        }
+
+        a {margin-top: -40px;}
+        
     }
 
     .Main {
         grid-area: main;
     }
 
-    .encabezado_titulo h1 {
-        font-size: 20px;
-        text-align: center;
-        margin-top: -10px;
+    .img_index {
+        border-radius: 15%;
+
+        img {
+            border-radius: 10%;
+            width: 450px;
+        }
     }
 
-    .parrafo_contenido p {
-        font-size: 12px;
+    .encabezado_titulo h1 {
+        font-size: 25px;
         text-align: center;
         margin-top: 10px;
     }
 
-    .Footer p {
+    .parrafo_contenido p {
         font-size: 15px;
         text-align: center;
+        margin-top: 10px;
+    }
 
+    .Footer {
+        grid-area: footer;
+
+        p {
+            font-size: 15px;
+            text-align: center;
+        }
     }
 
     .redes_sociales {
-        margin-bottom: auto;
-        margin-left: 130px;
+        margin-left: 120px;
         display: inline-block;
         display: flex;
 

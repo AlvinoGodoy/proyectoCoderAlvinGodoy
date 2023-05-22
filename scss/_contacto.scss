@@ -1,13 +1,67 @@
+.main_contacto {
+    text-align: center;
+}
+
+.forms {
+    margin-top: 30px;
+}
+
+.form-label {
+    margin-top: 40px;
+}
+
+.form-check-label {
+    margin-top: 10px;
+}
+
+.form-check-input {
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
 /* ----------Medidas para Tablet-------- */
 
 @media screen and (max-width: 768px) {
 
     h1 {
         text-align: center;
+        font-size: 30px;
     }
 
     .forms {
-        text-align: center;
+        margin-top: -20px;
     }
 
+    .main_contacto {
+
+        img {
+            height: 700px;
+            width: 800px;
+        }
+    }
+
+}
+
+
+/* ----------Medidas para Celular-------- */
+
+@media screen and (max-width: 480px) {
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .main_contacto {
+
+        img {
+            height: 450px;
+            width: 500px;
+        }
+    }
 }

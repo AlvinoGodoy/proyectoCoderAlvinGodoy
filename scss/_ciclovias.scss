@@ -34,11 +34,16 @@
     }
 }
 
+.parrafo_ciclo p {
+    font-size: 15px;
+    text-align: left;
+}
+
 .mapa {
     grid-area: mapa;
     text-align: right;
     justify-self: center;
-    transform: translate(-50px, 90px);
+    transform: translate(-20px, 80px);
 }
 
 .Footer {
@@ -48,12 +53,6 @@
 /* ----------Medidas para Tablet-------- */
 
 @media screen and (max-width: 768px) {
-
-    h1 {
-        padding: 10px;
-        font-size: 25px;
-        margin-top: -20px;
-    }
 
     .contenedorgrilla {
         display: grid;
@@ -77,6 +76,7 @@
     .parrafo_ciclo p {
         font-size: 15px;
         text-align: center;
+        margin: auto;
     }
 
     .mapa {
@@ -87,8 +87,12 @@
     }
 
     .Footer {
-        grid-template-areas: footer;
+        grid-area: footer;
+    }
 
+    .encabezado_ciclo h1 {
+        font-size: 30px;
+        margin-top: 30px;
     }
 
 }
@@ -99,7 +103,7 @@
 
     .contenedorindex {
         display: grid;
-        grid-template-columns: 100%;
+        grid-template-columns: 1fr;
         /* 2 columnas */
         grid-template-rows: auto;
         /* 4 filas */
@@ -119,24 +123,37 @@
     }
 
     .encabezado_ciclo h1 {
-        font-size: 20px;
+        font-size: 25px;
         text-align: center;
-        margin-top: -10px;
+        margin-top: 10px;
     }
 
-    .parrafo_ciclo p {
-        font-size: 12px;
-        text-align: left;
-        margin-top: 10px;
+    .parrafo_ciclo {
+
+        p {
+            text-align: left;
+            font-size: 15px;
+            margin-left: 20px;
+            padding: 2% 10%;
+            margin-bottom: 5px;
+            margin-top: -10px;
+        }
     }
 
     .mapa {
         grid-area: mapa;
-        text-align: center;
+
+        iframe {
+            text-align: center;
+            margin: -20px auto auto 10px;
+            width: 450px;
+            height: 800px;
+        }
     }
 
     .Footer {
         grid-area: footer;
-    }
+        margin-top: 80px;
 
+    }
 }
