@@ -31,6 +31,12 @@
     justify-self: center;
 }
 
+.encabezado_tituloo {
+    h1 {
+        color: black;
+    }
+}
+
 .img_index {
     background: rgb(0, 195, 255);
     background: linear-gradient(180deg, rgba(0, 195, 255, 1) 17%, rgba(9, 9, 106, 1) 44%, rgba(2, 0, 36, 1) 76%);
